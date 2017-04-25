@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>r pazda</title>
+        
+        <!-- JQuery Google CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Materialize, Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+        <!-- Materialize, Compiled and minified JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        
+        <!--ListJS-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+        <!--Material Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Scripts -->
+        <script>
+            
+        </script>
+
+        <style>
+            body{
+                color:aquamarine;
+            }
+            .btn{
+                width:100%;
+            }
+        </style>
+
+    </head>
+
+    <body class="blue-grey darken-4">
+
+        <div class="container">
+
+            <div class="row" style="margin-top:20px;">
+                <div class="col s2 offset-s5">
+                    <img src="logo.png" style="width:100%"></img>
+                </div>
+            </div>
+
+            <div class="row">
+                <h1 class="center-align">r pazda</h1>
+            </div>
+
+            <div class="row">
+
+                <div class="col s12 m2 offset-m3">
+                    <center>
+                        <a class=" purple darken-3 waves-effect waves-light btn" href="index.html">About</a>
+                    </center>
+                </div>
+
+                <div class="col s12 m2">
+                    <center>
+                        <a class="teal accent-4 waves-effect waves-light btn" href="projects.html">Projects</a>
+                    </center>
+                </div>
+
+                <div class="col s12 m2">
+                    <center>
+                        <a style="color:black" class="lime accent-3 waves-effect waves-light btn" href="https://github.com/rpazda" target="_blank">GitHub</a>
+                    </center>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col m6">
+                    <h3>Education</h3>
+                    <hr>
+                    <p>
+                        Currently pursuing a B.S. in Computer Science from the University of Central Florida
+                    </p>
+                </div>
+
+                <div class="col m6">
+                    <h3>Skills</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col s6">
+                            <h5>Languages</h5>
+                            <hr>
+                            <ul>
+                                <li>C</li>
+                                <li>C#</li>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript/JQuery</li>
+                                <li>Java</li>
+                                <li>PHP</li>
+                                <li>SQL</li>
+                            </ul>
+                            <h5>Frameworks</h5>
+                            <hr>
+                            <ul>
+                                <li>.NET</li>  
+                                <li>Laravel</li>
+                                <li>Bootstrap</li>
+                                <li>Materialize</li> 
+                            </ul>
+                        </div>
+                        <div class="col s6">
+                            <h5>Tools</h5>
+                            <hr>
+                            <ul>
+                                <li>Visual Studio 2015</li>
+                                <li>Visual Studio Code</li>
+                                <li>Eclipse</li>
+                                <li>CodeBlocks</li>
+                                <li>GitHub</li>    
+                            </ul>
+                            <h5>Processes</h5>
+                            <hr>
+                            <ul>
+                                <li>Agile/Scrum</li>
+                                <li>MVC</li> 
+                                <li>Unit Testing</li>  
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <hr>
+
+            <center>
+                Richard Pazda - <span id="footer-year"></span>
+            </center>
+
+            <script>
+                $("#footer-year").text(new Date().getFullYear());
+            </script>
+
+        </div>
+
+    </body>
+
+</html>
