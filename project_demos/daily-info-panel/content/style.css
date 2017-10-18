@@ -1,0 +1,15 @@
+
+	body{
+		color: white !important;
+		background-color: black !important;
+	}
+	#bottom-row{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+	}
+	#map{
+		width: 320px; 
+		height:300px
+	}
+	

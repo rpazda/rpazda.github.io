@@ -1,0 +1,146 @@
+<!DOCTYPE htm>
+
+<html>
+
+    <head>
+
+        <meta name="author" content="Richard Pazda">
+
+        <meta charset="UTF-8"> 
+
+        <title>Info Panel</title>
+
+        <!--Main style sheet-->
+		<link rel="stylesheet" type="text/css" href="content/style.css">
+		
+		<!-- jQuery -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!--BootStrap CDN
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></link>-->
+		
+		<!--BootStrap-->
+		<link rel="stylesheet" href="content/bootstrap/css/bootstrap.min.css">
+		
+		<!--FontAwesome-->
+		<link rel="stylesheet" href="content/font-awesome/css/font-awesome.min.css">
+		
+		<!--weather-icons-->
+		<link rel="stylesheet" href="content/weather-icons/css/weather-icons.min.css">
+		
+		<!--Javascript functions-->
+		<script type="text/javascript" src="panel.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+
+            <div class="row"style="margin-top: 20px">
+                
+                <div class="col-md-4">
+                    
+                    <center>
+                        <h2>Weather</h2>
+                        <h2><span id="weather-string"></span>&nbsp;<span id="weather-icon"></span></h2>
+                        <h3>Temperature: <span id="temp-real"></span></h3>
+					    <h3>Feels Like: <span id="temp-feel"></span></h3>
+                        <h3>Relative Humidity: <span id="humidity"></span></h3>
+                        <h3>UV Index: <span id="UV"></span></h3>
+                    </center>
+
+                </div>
+
+                <div class="col-md-4" >
+
+                    <center>
+                        <div id="map">
+                            
+                        </div>
+
+                        <script>
+                            //var apiKey = "";
+                        </script>
+
+                        <script async defer
+                            src='https://maps.googleapis.com/maps/api/js?key='+apiKey+'&callback=initMap'>
+                        </script>
+
+                        <span class="btn btn-default" onClick="initMap();" style="margin-top:10px;">Re-center</span>
+                    </center>
+
+                </div>
+
+                <div class="col-md-4">
+
+                   
+                        <div style="text-align:center">
+                            <object width="320" height="240" id="undefined" name="undefined" data="https://icons.wunderground.com/swf/flowplayer.commercial-3.2.8.swf" type="application/x-shockwave-flash">
+                                <param name="movie" value="https://icons.wunderground.com/swf/flowplayer.commercial-3.2.8.swf" />
+                                <param name="allowfullscreen" value="true" />
+                                <param name="allowscriptaccess" value="always" />
+                                <param name="flashvars" value='config={"key":"#@8d339434b223613a374","clip":{"autoPlay":true,"autoBuffering":true},"playlist":[{"url":"https://icons.wunderground.com/webcamramdisk/b/e/BengalHouse/1/current.jpg?e%3D1479775263","autoPlay":false,"autoBuffering":true},{"url":"https://icons.wunderground.com/webcamcurrent/b/e/BengalHouse/1/current.mp4?e%3D1479775263","autoPlay":true,"autoBuffering":true}],"plugins":{"controls":{"all":true,"mute":true,"play":true}}}' />
+                            </object>
+                        </div>
+                    
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                
+                </div>
+
+            </div>
+
+            <div class="row">
+                
+                <div class="col-md-4">
+                    
+                </div>
+
+            </div>
+
+            <div class="row" id="bottom-row">
+                
+                <div class="col-md-6">
+
+                    <center>
+						
+						<div id="">
+                            <iframe id="parking-data" src="" width="100%" height="262" frameBorder="0">
+                            </iframe>
+                        </div>
+						
+					</center>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <center>
+						
+						<h1><span id="clock"></span></h1>
+
+                        <h2><span id="date"></span></h2>
+
+                        <h2>Sunrise: <span id="sunrise"></span></h2>
+
+                        <h2>Sunset: <span id="sunset"></span></h2>
+						
+					</center>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </body>
+
+</html>
