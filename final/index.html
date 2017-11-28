@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>r pazda</title>  
+
+    <script src="libs/three.js"></script>
+    <script src="libs/keyboard.js"></script>
+    <script src="js/PointerLockControls.js"></script>
+    <script src="libs/helvetiker_regular.typeface.js"></script>
+    <script src="loaders/OBJLoader.js"></script>
+    <script src="loaders/MTLLoader.js"></script>
+    <script src="loaders/OBJMTLLoader.js"></script>
+    
+    <script src="js/shaders.js"></script>
+
+    <!-- Google jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Google Orbitron font CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet"> 
+
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+<style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: #000000;
+            color: #b2ffea;
+            margin: 0;
+            overflow: hidden;
+            font-family: arial;
+        }
+
+        #blocker {
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0,0,0,0.5);
+
+        }
+
+        #instructions {
+
+            width: 100%;
+            height: 100%;
+
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            box-orient: horizontal;
+
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            box-align: center;
+
+            cursor: pointer;
+
+        }
+
+        p {
+            text-align: right;
+        }
+
+        .spacer
+        {
+            margin-top: 5px;
+        }
+        .text-highlight-color
+        {
+            color:#ef52f2;
+        }
+    </style>
+
+    <script type="text/x-glsl" id="vertex">
+        varying vec2 uVu;
+        void main()
+        {
+            uVu = uv;
+
+            gl_Position = projectionMatrix *
+                modelViewMatrix *
+                vec4(position,1.0);
+        }
+    </script>
+
+    <!--Pattern for the square with simple vertex shader-->
+    <script type="text/x-glsl" id="fragment">
+        varying vec2 uVu;
+        void main()
+        {
+            float red = uVu.x- uVu.y;
+            float green = abs(uVu.y/uVu.x);
+            float blue = (uVu.x/uVu.y);
+            gl_FragColor = vec4(red,green,blue,1.0);
+        }
+    </script>
+
+</head>
+
+<body>
+    
+    <script src="js/vaporgame.js"></script>
+
+    <div id="blocker">
+
+        <div style="margin-left: 20px;">
+            <h2><i>V A P O R</i></h2>  
+            <h3>by r pazda</h3>
+        </div>
+                
+        <div id="instructions">
+            <span style="font-size:40px">It's all in your head...</span>
+            <br />
+            <ul style="list-style-type: none; margin-left: 20px;" class="">
+                <li><span class="text-highlight-color">Q</span> - Select Album</li>
+                <li><span class="text-highlight-color">W</span> - Move Forward</li>
+                <li><span class="text-highlight-color">S</span> - Move Backward</li>
+                <li><span class="text-highlight-color">A</span> - Strafe Left</li>
+                <li><span class="text-highlight-color">D</span> - Strafe Right</li>
+                <hr>
+                <li><span class="text-highlight-color"><i class="material-icons" alt="mouse icon">mouse</i></span> - Look</li>
+            </ul>
+            <br />
+            <h4><span id="now-playing"></span></h4>
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>
