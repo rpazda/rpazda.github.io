@@ -1,0 +1,41 @@
+body{
+    color:#beefed;
+    background-color: rgb(38, 50, 56)
+}
+.row{
+    margin-bottom: 20px;
+}
+.btn{
+    width:100%;
+}
+h2, h3, h4, h5, h6{
+    color: #debeef !important
+}
+.purple-link{
+    background-color: rgb(106, 27, 154);
+    color: white;
+}
+.teal-link{
+    background-color: rgb(0, 191, 165);
+    color: white;
+}
+.lime-link{
+    background-color: rgb(198, 255, 0);
+    color: black;
+}
+.nav-links{
+    color: white;
+}
+hr{
+    border-color: #debeef;
+}
+.card{
+    background-color: rgb(96, 125, 139);
+    margin-bottom: 10px;
+}
+.card-subtitle{
+    color: #beefed !important;
+}
+.card-link{
+    color: white;
+}
