@@ -39,3 +39,16 @@ hr{
 .card-link{
     color: white;
 }
+
+.wireframe-crosshatch:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV2M8ceLEfwsLC0YGPACkBqwAn2KYHNwkbIqRxVCsRJZA14jhNpACkHPQ3U2eQqKsJsozRAUPsQEOAJ6eRrkYsJ6UAAAAAElFTkSuQmCC"); }
+  
+.wireframe-container {
+    border: 1px solid #ffffff;
+    position: relative;
+    color: #c8c8c8;
+    background: transparent; }
